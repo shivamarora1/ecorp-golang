@@ -39,5 +39,5 @@ func main() {
 	over[5] = sb6
 
 	//At end print this array
-	fmt.Printf("%v", over)
+	fmt.Printf("%v\n", over)
 }
