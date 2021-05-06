@@ -2,6 +2,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
@@ -9,17 +10,27 @@ func main() {
 
 	//Defining structure
 	type person struct {
-		name   string
-		age    int
-		weight int
+		Name   string
+		Age    int
+		Weight int
 	}
 
 	//Creating a variable of structure type
 	var p1 person
-	p1.name = "Rob"
-	p1.age = 23
-	p1.weight = 67
+	p1.Name = "Rob"
+	p1.Age = 23
+	p1.Weight = 67
 
-	fmt.Printf("Name is %s\nAge is %d\nWeight is %d", p1.name, p1.age, p1.weight)
+	var arr []int
+	arr = append(arr, 23)
+	arr = append(arr, 34)
+	arr = append(arr, 90)
+
+	b, err := json.Marshal(arr)
+	if err != nil {
+		fmt.Println(err.Error())
+	} else {
+		fmt.Println(string(b))
+	}
 
 }
