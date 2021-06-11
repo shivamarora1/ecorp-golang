@@ -9,8 +9,8 @@ func myFunc(a interface{}) {
 }
 
 func main() {
-	var my_age int
-	my_age = 25
+	var my_age string
+	my_age = "Hello Panda"
 
 	myFunc(my_age)
 }
